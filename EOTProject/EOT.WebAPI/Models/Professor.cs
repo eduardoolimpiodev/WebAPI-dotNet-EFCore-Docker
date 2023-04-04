@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace EOT.WebAPI.Models
 {
     public class Professor
@@ -10,6 +12,6 @@ namespace EOT.WebAPI.Models
         }
         public int Id { get; set; }
         public string Nome { get; set; }
-        public IEnumerable<Disciplina> Disciplinas { get; set; }
+        public IEnumerable<Disciplina> Disciplinas {get; set;}
     }
 }
