@@ -1,4 +1,6 @@
-using System;
+
+using System.Collections.Generic;
+
 namespace EOT.WebAPI.Models
 {
     public class Aluno
@@ -16,5 +18,7 @@ namespace EOT.WebAPI.Models
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string Telefone { get; set; }
+        
+        public IEnumerable<ALunoDisciplina> AlunosDisciplinas { get; set; }
     }
 }

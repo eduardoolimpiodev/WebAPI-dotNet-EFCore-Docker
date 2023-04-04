@@ -1,9 +1,17 @@
 namespace EOT.WebAPI.Models
 {
-    public class Fornecedor
+    public class ALunoDisciplina
     {
-        public int Id { get; set; }
-        public string Descricao { get; set; }
-        public string CNPJ { get; set; }
+        public AlunoDIsciplina() { }
+
+        public ALunoDisciplina(int alunoId, int disciplinaId)
+        {
+            this.AlunoId = alunoId;
+            this.DisciplinaId = disciplinaId;
+        }
+        public int AlunoId { get; set; }
+        public Aluno Aluno { get; set; }
+        public int DisciplinaId { get; set; }
+        public Disciplina Disciplina { get; set; }
     }
 }
