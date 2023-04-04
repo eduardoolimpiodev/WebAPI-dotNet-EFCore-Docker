@@ -22,3 +22,5 @@ E Professor e disciplina - um para muitos, pois um professor pode dar aula para 
 Add Migrations:
 dotnet ef migrations add Init
 
+Add SqLite Database:
+dotnet ef database update
