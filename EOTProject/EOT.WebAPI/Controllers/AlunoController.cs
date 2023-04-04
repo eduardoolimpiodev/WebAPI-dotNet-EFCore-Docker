@@ -70,26 +70,30 @@ namespace EOT.WebAPI.Controllers
             return Ok(id);
         }
 
+
         [HttpPost()]
-        public IActionResult Post()
+        public IActionResult Post(Aluno aluno)
         {
-            return Ok();
+            return Ok(aluno);
         }
 
+
         [HttpPut("{id}")]
-        public IActionResult Put(int id)
+        public IActionResult Put(int id, Aluno aluno)
         {
-            var alunos = Alunos.FirstOrDefault( a => a.Id == id);
-            if(alunos == null) return BadRequest("O aluno não foi encontrado.");
-            return Ok(id);
+            return Ok(aluno);
+        }
+
+        [HttpPatch("{id}")]
+        public IActionResult Patch(int id, Aluno aluno)
+        {
+            return Ok();
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var alunos = Alunos.FirstOrDefault( a => a.Id == id);
-            if(alunos == null) return BadRequest("O aluno não foi encontrado.");
-            return Ok(id);
+            return Ok();
         }
-    }
+}
 }
