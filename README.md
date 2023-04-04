@@ -19,3 +19,6 @@ Onde Aluno e Disciplina - muitos para muitos, pois um aluno pode cursas diversas
 
 E Professor e disciplina - um para muitos, pois um professor pode dar aula para diversas disciplinas e uma disciplina pode ter somente um professor.
 
+Add Migrations:
+dotnet ef migrations add Init
+
