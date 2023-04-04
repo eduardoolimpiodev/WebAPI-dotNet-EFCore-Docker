@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.API\\EOT.API.csproj",
-      "projectName": "EOT.API",
-      "projectPath": "C:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.API\\EOT.API.csproj",
+      "projectUniqueName": "C:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.WebAPI\\EOT.WebAPI.csproj",
+      "projectName": "EOT.WebAPI",
+      "projectPath": "C:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.WebAPI\\EOT.WebAPI.csproj",
       "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.API\\obj\\",
+      "outputPath": "C:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

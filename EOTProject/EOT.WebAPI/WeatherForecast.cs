@@ -1,6 +1,6 @@
 using System;
 
-namespace EOT.API
+namespace EOT.WebAPI
 {
     public class WeatherForecast
     {

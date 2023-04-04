@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace EOT.API.Controllers
+namespace EOT.WebAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]

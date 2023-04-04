@@ -6,4 +6,4 @@ add global.json
 dotnet new globaljson --sdk
 
 create WebAPI
-dotnet new webapi -n Eot.WebAPI
+dotnet new webapi -n EOT.WebAPI
