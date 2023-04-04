@@ -21,14 +21,14 @@ namespace EOT.WebAPI.Controllers
             new Aluno() {
                 Id = 2,
                 Nome = "Maria",
-                 Sobrenome = "Olimpio",
+                Sobrenome = "Olimpio",
                 Telefone = "78456321"
 
             },
             new Aluno() {
                 Id = 3,
                 Nome = "Marcele",
-                 Sobrenome = "Olimpio",
+                Sobrenome = "Olimpio",
                 Telefone = "123456"
 
             },
@@ -51,7 +51,16 @@ namespace EOT.WebAPI.Controllers
             return Ok(id);
         }
 
-       //query string byid?id=1
+         // api/aluno/byname?nome=Eduardo&sobrenome=Olimpio
+        [HttpGet("ByName")]
+        public IActionResult GetByName(string nome, string Sobrenome)
+        {
+            var aluno = Alunos.FirstOrDefault( a => a.Nome.Contains(nome) && a.Sobrenome.Contains(Sobrenome));
+            if(aluno == null) return BadRequest("O aluno não foi encontrado.");
+            return Ok(aluno);
+        }
+
+        //query string byid?id=1
         // api/aluno/id
         [HttpGet("ById")]
         public IActionResult QueryString(int id)
