@@ -51,6 +51,16 @@ namespace EOT.WebAPI.Controllers
             return Ok(id);
         }
 
+/       //query string byid?id=1
+        // api/aluno/id
+        [HttpGet("ById")]
+        public IActionResult QueryString(int id)
+        {
+            var alunos = Alunos.FirstOrDefault( a => a.Id == id);
+            if(alunos == null) return BadRequest("O aluno não foi encontrado.");
+            return Ok(id);
+        }
+
         [HttpPost()]
         public IActionResult Post()
         {
