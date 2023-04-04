@@ -54,9 +54,7 @@ namespace EOT.WebAPI.Controllers
         [HttpPost()]
         public IActionResult Post()
         {
-            var alunos = Alunos.FirstOrDefault( a => a.Id == id);
-            if(alunos == null) return BadRequest("O aluno não foi encontrado.");
-            return Ok(id);
+            return Ok();
         }
 
         [HttpPut("{id}")]
