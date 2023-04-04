@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using System.Linq;
 using EOT.WebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,14 +19,14 @@ namespace EOT.WebAPI.Controllers
 
             },
             new Aluno() {
-                Id = 1,
+                Id = 2,
                 Nome = "Maria",
                  Sobrenome = "Olimpio",
                 Telefone = "78456321"
 
             },
             new Aluno() {
-                Id = 1,
+                Id = 3,
                 Nome = "Marcele",
                  Sobrenome = "Olimpio",
                 Telefone = "123456"
@@ -39,6 +40,39 @@ namespace EOT.WebAPI.Controllers
         public IActionResult Get()
         {
             return Ok(Alunos);
+        }
+
+        // api/aluno/id
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            var alunos = Alunos.FirstOrDefault( a => a.Id == id);
+            if(alunos == null) return BadRequest("O aluno não foi encontrado.");
+            return Ok(id);
+        }
+
+        [HttpPost()]
+        public IActionResult Post()
+        {
+            var alunos = Alunos.FirstOrDefault( a => a.Id == id);
+            if(alunos == null) return BadRequest("O aluno não foi encontrado.");
+            return Ok(id);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(int id)
+        {
+            var alunos = Alunos.FirstOrDefault( a => a.Id == id);
+            if(alunos == null) return BadRequest("O aluno não foi encontrado.");
+            return Ok(id);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var alunos = Alunos.FirstOrDefault( a => a.Id == id);
+            if(alunos == null) return BadRequest("O aluno não foi encontrado.");
+            return Ok(id);
         }
     }
 }
