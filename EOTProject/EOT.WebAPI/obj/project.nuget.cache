@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IuWgHT1BjVyKarMMn5uFY04yIM2ojm/BiV44/c9vfr8VbfEeC2UMa1fPiXZOm438GfwXGc6oNHtl5jym/1xZYQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.WebAPI\\EOT.WebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\eduar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
+  ],
+  "logs": []
+}
