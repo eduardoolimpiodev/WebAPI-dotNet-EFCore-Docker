@@ -7,23 +7,17 @@ namespace EOT.WebAPI.Data
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
-
-        public DbSet<Aluno> Alunos { get; set;}
-
-        public DbSet<Professor> Professores { get; set;}
-
-        public DbSet<Disciplina> Disciplinas { get; set;}
-
-        public DbSet<AlunoDisciplina> AlunosDisciplinas { get; set;}
-
+        public DbSet<Aluno> Alunos { get; set; }
+        public DbSet<Professor> Professores { get; set; }
+        public DbSet<Disciplina> Disciplinas { get; set; }
+        public DbSet<AlunoDisciplina> AlunosDisciplinas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<AlunoDisciplina>()
                 .HasKey(AD => new {AD.AlunoId, AD.DisciplinaId});
 
-
-             builder.Entity<Professor>()
+            builder.Entity<Professor>()
                 .HasData(new List<Professor>(){
                     new Professor(1, "Lauro"),
                     new Professor(2, "Roberto"),
@@ -31,7 +25,7 @@ namespace EOT.WebAPI.Data
                     new Professor(4, "Rodrigo"),
                     new Professor(5, "Alexandre"),
                 });
-            
+
             builder.Entity<Disciplina>()
                 .HasData(new List<Disciplina>{
                     new Disciplina(1, "Matemática", 1),
@@ -40,7 +34,7 @@ namespace EOT.WebAPI.Data
                     new Disciplina(4, "Inglês", 4),
                     new Disciplina(5, "Programação", 5)
                 });
-            
+
             builder.Entity<Aluno>()
                 .HasData(new List<Aluno>(){
                     new Aluno(1, "Marta", "Kent", "33225555"),
@@ -77,7 +71,7 @@ namespace EOT.WebAPI.Data
                     new AlunoDisciplina() {AlunoId = 7, DisciplinaId = 3 },
                     new AlunoDisciplina() {AlunoId = 7, DisciplinaId = 4 },
                     new AlunoDisciplina() {AlunoId = 7, DisciplinaId = 5 }
-                });   
+                });
         }
     }
 }

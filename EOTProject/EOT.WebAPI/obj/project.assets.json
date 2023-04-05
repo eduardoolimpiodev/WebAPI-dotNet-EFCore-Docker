@@ -1187,11 +1187,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.WebAPI\\EOT.WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.WebAPI\\EOT.WebAPI.csproj",
       "projectName": "EOT.WebAPI",
-      "projectPath": "c:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.WebAPI\\EOT.WebAPI.csproj",
+      "projectPath": "C:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.WebAPI\\EOT.WebAPI.csproj",
       "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\eduar\\Documents\\WebAPI-dotNet-EFCore-Docker\\EOTProject\\EOT.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -1211,6 +1211,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -1222,6 +1223,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -1250,6 +1252,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.23, 3.1.23]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1258,7 +1266,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

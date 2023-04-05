@@ -1,11 +1,8 @@
-using System.Collections.Generic;
-
 namespace EOT.WebAPI.Models
 {
     public class AlunoDisciplina
     {
         public AlunoDisciplina() { }
-
         public AlunoDisciplina(int alunoId, int disciplinaId)
         {
             this.AlunoId = alunoId;

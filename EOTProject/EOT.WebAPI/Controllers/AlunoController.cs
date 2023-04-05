@@ -1,17 +1,17 @@
+
 using System.Collections.Generic;
 using System.Linq;
 using EOT.WebAPI.Data;
+using EOT.WebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using EOT.WebAPI.Models;
 
 namespace EOT.WebAPI.Controllers
-{
-
+{    
+    [ApiController]
     [Route("api/[controller]")]
     public class AlunoController : ControllerBase
     {
-        
         private readonly DataContext _context;
 
         public AlunoController(DataContext context)
@@ -26,7 +26,7 @@ namespace EOT.WebAPI.Controllers
         }
 
         // api/aluno/byId
-        [HttpGet("byId/{id}")]
+         [HttpGet("byId/{id}")]
         public IActionResult GetById(int id)
         {
             var aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
@@ -34,18 +34,21 @@ namespace EOT.WebAPI.Controllers
 
             return Ok(aluno);
         }
-    
+
         [HttpGet("ByName")]
         public IActionResult GetByName(string nome, string Sobrenome)
         {
+            
             var aluno = _context.Alunos.FirstOrDefault(a => 
                 a.Nome.Contains(nome) && a.Sobrenome.Contains(Sobrenome)
             );
             if (aluno == null) return BadRequest("O Aluno não foi encontrado");
-
             return Ok(aluno);
         }
 
+
+
+        // api/aluno
         [HttpPost]
         public IActionResult Post(Aluno aluno)
         {
@@ -78,7 +81,7 @@ namespace EOT.WebAPI.Controllers
             return Ok(aluno);
         }
 
-        [HttpDelete("{id}")]
+         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             var aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
@@ -90,4 +93,3 @@ namespace EOT.WebAPI.Controllers
         }
     }
 }
-
