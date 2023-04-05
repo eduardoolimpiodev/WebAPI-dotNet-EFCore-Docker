@@ -5,7 +5,7 @@ using EOT.WebAPI.Data;
 using EOT.WebAPI.Models;
 
 
-namespace EAT.WebAPI.Controllers
+namespace EOT.WebAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
