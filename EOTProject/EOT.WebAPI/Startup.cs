@@ -31,6 +31,8 @@ namespace EOT.WebAPI
                 context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
 
+                
+
             services.AddControllers();
         }
 
