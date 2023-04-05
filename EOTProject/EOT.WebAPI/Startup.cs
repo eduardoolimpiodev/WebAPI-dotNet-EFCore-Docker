@@ -30,9 +30,10 @@ namespace EOT.WebAPI
             services.AddDbContext<DataContext>(
                 context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
-
+            
             //Conceito de injeção de dependência voltada para a inversão do controle. Ivertial of control.
 
+            // services.AddTransient<IRepository, Repository>();
             services.AddScoped<IRepository, Repository>();
 
             services.AddControllers();

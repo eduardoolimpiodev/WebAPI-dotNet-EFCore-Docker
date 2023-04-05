@@ -12,9 +12,12 @@ namespace EOT.WebAPI.Controllers
     public class ProfessorController : ControllerBase
     {
         private readonly DataContext _context;
+        private readonly IRepository _repo;
 
-        public ProfessorController(DataContext context)
+        public ProfessorController(DataContext context,
+                                  IRepository repo)
         {
+            _repo = repo;
             _context = context;
         }
 
@@ -39,7 +42,7 @@ namespace EOT.WebAPI.Controllers
         [HttpGet("ByName")]
         public IActionResult GetByName(string nome)
         {
-            var Professor = _context.Professores.FirstOrDefault(a => 
+            var Professor = _context.Professores.FirstOrDefault(a =>
                 a.Nome.Contains(nome)
             );
             if (Professor == null) return BadRequest("O Professor não foi encontrado");
@@ -49,11 +52,14 @@ namespace EOT.WebAPI.Controllers
 
         // api/Professor
         [HttpPost]
-        public IActionResult Post(Professor Professor)
+        public IActionResult Post(Professor professor)
         {
-            _context.Add(Professor);
-            _context.SaveChanges();
-            return Ok(Professor);
+            _repo.Add(professor);
+            if(_repo.SaveChanges())
+            {
+                return Ok(professor);
+            }
+            return BadRequest("Professor não cadastrado");
         }
 
         // api/Professor
@@ -86,7 +92,7 @@ namespace EOT.WebAPI.Controllers
             var Professor = _context.Professores.FirstOrDefault(a => a.Id == id);
             if (Professor == null) return BadRequest("Professor não encontrado");
 
-             _context.Remove(Professor);
+            _context.Remove(Professor);
             _context.SaveChanges();
             return Ok();
         }
